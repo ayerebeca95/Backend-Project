@@ -63,7 +63,6 @@ hacerTarea(1, () => {
 
 //Imprime letra por letra
 const palabra = 'hola';
-
 const imprimir = (palabra, demora, cb) => {
     let i = 0;
     const timeId = setInterval(() =>{
@@ -77,7 +76,6 @@ const imprimir = (palabra, demora, cb) => {
     }, 1000)
 }
 
-const fin = () => console.log('termine');
+const fin = () => console.log('Listongui');
 
 imprimir('aye',  250, fin)
-imprimir('hermosa',  250, fin)

@@ -40,42 +40,99 @@ usuario1.countMascotas();
 //! Antes corrias el programa y daba error, por eso tenes que leer la consola para ver si esta bien tu programa
 //! o hay errores, ahora si lo corres va a andar bien, avisame cualquier duda
 
+//Desafio 1
+
+/*class Usuario  {
+    constructor (nombre, apellido ,libros, mascotas) {
+        this.nombre   = nombre;
+        this.apellido = apellido;
+        this.libros   = libros;
+        this.mascotas = mascotas;  
+    }
+
+    getFullName () {
+        return `${this.nombre} ${this.apellido}`
+    }
+
+    addMascota (nuevaMascota) {
+      this.mascotas.push(nuevaMascota)
+      return nuevaMascota
+    }
+
+    countMascotas () {
+        return this.mascotas.length 
+    }
+
+    addBook (nombre,autor) {
+        return this.libros.push({nombre,autor})
+    }
+
+    getBookNames () {
+        return this.libros.map(item => item.nombre)
+    }
+}
+
+const usuario = new Usuario (
+    'M',
+    'Robi',
+    [ {nombre:'Lotr' , autor:'J. R. R. Tolkien'} , {nombre:'Lotf' , autor:'William Golding'} ],
+    ['Loco','Juana'])
+ 
+usuario.addBook('Harry','JK ROLLING')   
+console.log(`${usuario.getFullName()}\n${usuario.addMascota('Chiche')}\n${usuario.countMascotas()}\n${usuario.getBookNames()}` )
+// console.log(`aa ${usuario.getFullName()} ${usuario.addMascota('Chiche')} ${usuario.countMascotas()} ${usuario.addBook('Harry','JK ROLLING')} ${usuario.getBookNames()}`)
+// console.log(` ${usuario.getBookNames('asd')} `)
+
+ 
+
+
+
+
+
+
+
+
 // DESAFIO 2
 
-const fs = require('fs')
+const fs = require('fs');
+
+
 
 class Contenedor {
    constructor(archivo){
-    this.archivo = archivo
+    this.archivo = archivo;
+
    }
 
    async read(){
     try {
-        let data = await fs.promises.readFile(`./${this.archivo}`, 'utf-8')
+        let data = await fs.promises.readFile(`./${info.txt}`, 'utf-8')
         return data;
     } catch (err) {
-        throw Error(`Error del archivo ${err}`)
+        throw Error(`Error del archivo ${err}`);
         
     }
    }
 
    async write(datos, msg){
     try {
-       await fs.promises.writeFile(`./${this.archivo}`, JSON.stringify(datos,null, 2)) 
+       await fs.promises.writeFile(`./${info.txt} `, JSON.stringify(datos,null, 2)) 
        console.log(msg);
     } catch (err) {
         throw Error(`error al esctibir el archivo ${err}`)
     }
    }
 
-   async save(product){
+
+
+   async save(){
     let newId =1;
     let newProduct = {};
 
     let data = await this.read()
     let datos = JSON.parse(data)
 
-    if (data) {
+    if (!data) {
         product.id = newId;
         newProduct = [product]
     } else {
@@ -104,7 +161,7 @@ class Contenedor {
         let data = await this.read();
         let datos = JSON.parse(data);
 
-        let prosuct =datos.find(product => product.id ==myId);
+        let product =datos.find(product => product.id ==myId);
         if (product) {
             let index = datos.indexOf(product);
             console.log(index);
@@ -125,7 +182,7 @@ class Contenedor {
 
    module.exports = Contenedor;
 
-   let contenedor = new Contenedor('./productos.txt')
+   let contenedor = new Contenedor('./info.txt')
 
    async function test() {
     const newProduct = {
@@ -139,4 +196,5 @@ class Contenedor {
    await contenedor.deleteById(6)
 }
 
-test()
+test()*/
+

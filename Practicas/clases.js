@@ -24,5 +24,4 @@ const persona1 = new Cliente('juan calor', 12, 'ernest')
 persona1.mostrar();
 //perosna2.saludar();
 
-Cliente();
-console.log((Cliente());)
+
